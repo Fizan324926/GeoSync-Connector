@@ -1,6 +1,11 @@
-# GeoSync Connector
+# 🌐 **GeoSync Connector**
+
+🚀 _Seamlessly synchronize GeoJSON data from remote APIs to your local SQLite database._
 
 This Tauri application synchronizes GeoJSON data from a remote API with a local SQLite database. The app periodically fetches GeoJSON data from the API, stores it in a local SQLite database, and provides an interface for retrieving the synchronized data.
+
+
+![Example Image](demo/demo.png)
 
 ## Features
 
