@@ -1,0 +1,134 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main app container */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  width: 100vw; /* Ensures the app takes the full viewport width */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Header styling */
+h1 {
+  margin: 20px 0;
+  color: #007bff;
+}
+
+/* Status and button styling */
+button {
+  background-color: #fff; /* Initial background color */
+  border: 2px solid #007bff; /* Border color to match initial background */
+  color: #007bff; /* Initial text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Ensures the container takes the full width of the parent */
+  max-width: 1200px; /* Sets a max-width for larger screens */
+  margin: 20px auto; /* Centers the container horizontally and adds margin */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Map styling */
+#map {
+  flex: 2;
+  height: 500px; /* Ensures the map height */
+  position: relative;
+  width: 100%; /* Ensures the map takes the full width of its container */
+}
+
+/* Data panel styling */
+.data-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: 500px; /* Match the map height */
+  width: 100%; /* Ensures the data panel takes the full width of its container */
+  display: flex;
+  flex-direction: column;
+}
+
+.data-panel h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0; /* Sticks the title to the top of the container */
+  background-color: #fff; /* Ensures the background is consistent with the panel */
+  padding: 10px; /* Adds padding to match content */
+  border-bottom: 1px solid #ddd; /* Adds a border at the bottom of the title */
+  z-index: 1; /* Ensures the title stays on top of the scrollable content */
+}
+
+
+
+/* Stats line styling */
+.stats-line {
+  font-size: 14px;
+  color: #333;
+  background-color: #e0f7fa; /* Light cyan background */
+  border: 1px solid #00bcd4; /* Cyan border */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px; /* Space below the stats line */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+pre {
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 14px;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  .data-panel {
+    height: 300px; /* Adjust height for smaller screens */
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+}
